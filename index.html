@@ -362,11 +362,11 @@
             <a href="#" class="logo">Nepal Eater</a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#trends">Trends</a></li>
-                    <li><a href="#recipes">Recipes</a></li>
-                    <li><a href="#restaurants">Restaurants</a></li>
-                    <li><a href="#culture">Culture</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="/trending.html">Trends</a></li>
+                    <li><a href="/recipes.html">Recipes</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Reviews</a></li>
                 </ul>
             </nav>
         </div>
@@ -555,16 +555,19 @@
             });
         });
 
-        // Smooth scrolling for navigation
+        // Smooth scrolling only for hash links; allow normal navigation otherwise
         document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
         });
     </script>
 </body>
