@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs - Nepal Eater</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header bg-white border-b sticky top-0 z-50">
         <div class="nav-container">
             <a href="index.html" class="logo">Nepal Eater</a>
             <nav>
-                <ul class="nav-menu">
-                    <li><a href="trending.html">Trending</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="blog.html">Blogs</a></li>
-                    <li><a href="#new">New</a></li>
-                    <li><a href="#all">All</a></li>
+                <ul class="nav-menu flex gap-6 text-sm uppercase tracking-wide">
+                    <li><a class="hover:text-red-600 transition-colors" href="trending.html">Trending</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="recipes.html">Recipes</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="blog.html">Blogs</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="#new">New</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="#all">All</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content mx-auto max-w-6xl px-4">
         <!-- Popular Blogs -->
         <section id="popular" class="popular-blogs">
-            <div class="section-header">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
                 <h2>Popular Blogs</h2>
             </div>
-            <div class="article-grid">
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <article class="article-card">
                     <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff6b6b&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23feca57&quot; cx=&quot;120&quot; cy=&quot;80&quot; r=&quot;35&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;300&quot; cy=&quot;120&quot; r=&quot;45&quot;/></svg>'); background-size: cover;"></div>
                     <div class="article-content">
@@ -54,10 +55,10 @@
 
         <!-- New Blogs -->
         <section id="new" class="new-blogs">
-            <div class="section-header">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
                 <h2>New Blogs</h2>
             </div>
-            <div class="article-grid">
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <article class="article-card">
                     <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23e17055&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23a29bfe&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;40&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;300&quot; cy=&quot;80&quot; r=&quot;30&quot;/></svg>'); background-size: cover;"></div>
                     <div class="article-content">
@@ -92,10 +93,10 @@
 
         <!-- All Blogs -->
         <section id="all" class="all-blogs">
-            <div class="section-header">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
                 <h2>All Blogs</h2>
             </div>
-            <div class="article-grid">
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <article class="article-card">
                     <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff7675&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23fdcb6e&quot; cx=&quot;150&quot; cy=&quot;100&quot; r=&quot;50&quot;/><rect fill=&quot;%236c5ce7&quot; x=&quot;250&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;100&quot; rx=&quot;10&quot;/></svg>'); background-size: cover;"></div>
                     <div class="article-content">
@@ -174,26 +175,7 @@
         </div>
     </footer>
 
-    <script>
-        // Simple interactivity for blog cards
-        document.querySelectorAll('.article-card').forEach(card => {
-            card.addEventListener('click', function() {
-                console.log('Open blog:', this.querySelector('h3')?.textContent);
-            });
-        });
-
-        // Smooth local scrolling for in-page nav links
-        document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <script src="js/blog.js"></script>
 </body>
 </html>
 
