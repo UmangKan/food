@@ -68,13 +68,27 @@
         .hero {
             position: relative;
             height: 360px;
-            background: #000 url('https://www.himalayastrek.com/blog/top-10-nepali-foods-you-must-try-before-you-leave-nepal') center center no-repeat;
-            background-size: contain;
+            background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            overflow: hidden;
+        }
+
+        .hero img.hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .hero .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -325,6 +339,7 @@
 
     <!-- Hero -->
     <section class="hero">
+        <img src="Hero Recipe.jpeg" alt="Nepali recipes hero" class="hero-image" loading="eager">
         <div class="hero-content">
             <h1>Nepali Recipes</h1>
             <p>Authentic, home-style and modern takes on Nepal's most beloved dishes—curated for everyday cooking and festive feasts.</p>
