@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +60,7 @@
         .nav-links {
             display: flex;
             list-style: none;
+            align-items: center;
         }
         
         .nav-links li {
@@ -93,6 +93,40 @@
         
         .nav-links a:hover::after {
             width: 100%;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .auth-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .login-btn {
+            background: transparent;
+            color: white;
+            /* Removed border as requested */
+        }
+        
+        .login-btn:hover {
+            background: white;
+            color: #e63946;
+        }
+        
+        .signup-btn {
+            background: white;
+            color: #e63946;
+            /* Removed border as requested */
+        }
+        
+        .signup-btn:hover {
+            background: #f1faee;
         }
         
         .mobile-menu-btn {
@@ -251,7 +285,7 @@
         }
         
         .member-img {
-            height: 300px;
+            height: 450px;
             overflow: hidden;
             position: relative;
         }
@@ -315,6 +349,110 @@
             background-color: #e63946;
             color: white;
             transform: translateY(-3px);
+        }
+        
+        /* Newsletter Section */
+        .newsletter-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-btn {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-btn:hover {
+            background: #c1121f;
+            transform: translateY(-2px);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: #e63946;
+            opacity: 0.2;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: #1d3557;
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #457b9d;
         }
         
         /* Footer */
@@ -398,6 +536,116 @@
             transform: translateY(-5px);
         }
         
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            transform: translateY(-50px);
+            transition: transform 0.3s;
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #457b9d;
+        }
+        
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1d3557;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #1d3557;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-input:focus {
+            border-color: #e63946;
+            outline: none;
+        }
+        
+        .form-submit {
+            width: 100%;
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: #c1121f;
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #457b9d;
+        }
+        
+        .form-footer a {
+            color: #e63946;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
@@ -406,6 +654,10 @@
             
             .section-title {
                 font-size: 2.4rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
             }
         }
         
@@ -430,6 +682,11 @@
             
             .nav-links li {
                 margin-left: 0;
+            }
+            
+            .auth-buttons {
+                flex-direction: column;
+                gap: 15px;
             }
             
             .mobile-menu-btn {
@@ -482,6 +739,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .stat-box {
                 width: 100%;
                 max-width: 250px;
@@ -505,6 +766,12 @@
                     <li><a href="#">CULTURE</a></li>
                     <li><a href="#">REVIEWS</a></li>
                     <li><a href="#">ABOUT US</a></li>
+                    <li>
+                        <div class="auth-buttons">
+                            <a href="#" class="auth-btn login-btn" id="loginButton">Login</a>
+                            <a href="#" class="auth-btn signup-btn" id="signupButton">Join</a> <!-- Changed from "Sign Up" to "Join" -->
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -557,16 +824,16 @@
                 <!-- Team Member 1 -->
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Sunrose Bhetuwal">
+                        <img src="images/4a449ec4-db4e-400d-a355-1338b1c0deca.png" alt="Sunrose Bhetuwal">
                     </div>
                     <div class="member-info">
-                        <h3>Sunrose Bhetuwal</h3>
+                        <h3>Sanrose Bhetuwal</h3>
                         <span class="member-role">Team Leader</span>
                         <p>Food anthropologist with 10+ years experience in Nepali cuisine. Expert in Himalayan culinary traditions.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/sanrose.bhetuwal.96" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- Changed to Facebook -->
+                            <a href="https://www.instagram.com/sanrose_bhetuwal/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/sunrose-bhetuwal" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -574,16 +841,16 @@
                 <!-- Team Member 2 -->
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=644&q=80" alt="Rojal Shrestha">
+                        <img src="images/WhatsApp Image 2025-08-17 at 13.26.50_7e7af0ed.jpg" alt="Rojal Shrestha">
                     </div>
                     <div class="member-info">
                         <h3>Rojal Shrestha</h3>
                         <span class="member-role">Executive Chef</span>
                         <p>Specialist in Newari cuisine and Himalayan cooking techniques. Trained in 5-star hotels across Asia.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/rojal.shrestha.549083" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- Changed to Facebook -->
+                            <a href="https://www.instagram.com/rojalshrestha690/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/rojal-shrestha" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -591,16 +858,16 @@
                 <!-- Team Member 3 -->
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Ishan">
+                        <img src="images/17556902437900kkx3ji2.png" alt="Ishan">
                     </div>
                     <div class="member-info">
-                        <h3>Ishan</h3>
+                        <h3>Ishan Muni Bajracharya</h3>
                         <span class="member-role">Food Photographer</span>
                         <p>Capturing the beauty and essence of Nepali dishes. Winner of several international food photography awards.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/ishan.bajracharya.16" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- Changed to Facebook -->
+                            <a href="https://www.instagram.com/ishanmunibajracharya/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/ishan-photography" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -611,13 +878,13 @@
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Umang Kun Banks">
                     </div>
                     <div class="member-info">
-                        <h3>Umang Kun Banks</h3>
+                        <h3>Umang krishna kankasar </h3>
                         <span class="member-role">Cultural Researcher</span>
                         <p>Exploring regional food traditions across Nepal. PhD in Cultural Anthropology with focus on Nepali foodways.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/umang.kan.79" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- Changed to Facebook -->
+                            <a href="https://www.instagram.com/umangkansakar44/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/umang-kun-banks" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -625,19 +892,74 @@
                 <!-- Team Member 5 -->
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="https://images.unsplash.com/photo-1543080853-556086153871?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Unisha Bhattarai">
+                        <img src="images/Screenshot 2025-08-20 153100.png" alt="Unisha Bhattarai">
                     </div>
                     <div class="member-info">
                         <h3>Unisha Bhattarai</h3>
                         <span class="member-role">Recipe Developer</span>
                         <p>Creating modern twists on classic Nepali dishes. Author of 2 bestselling Nepali cookbooks.</p>
                         <div class="social-links">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100069256041402" target="_blank"><i class="fab fa-facebook-f"></i></a> <!-- Changed to Facebook -->
+                            <a href="https://www.instagram.com/unisha_bhattarai_/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/unisha-bhattarai" target="_blank"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Readers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Nepal Eater has completely transformed how I experience Nepali cuisine. Their recipes are authentic yet accessible, and their restaurant guides have led me to hidden gems across Kathmandu.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Rajiv K" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Rajiv K.</div>
+                            <div class="testimonial-role">Food Enthusiast</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As a Nepali living abroad, Nepal Eater has been my connection to home. Their cultural insights and traditional recipes help me share my heritage with friends and family.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Sarina T" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Sarina T.</div>
+                            <div class="testimonial-role">Expat Home Cook</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The depth of research and passion in every article is palpable. Nepal Eater isn't just a food blog—it's a cultural archive that preserves and celebrates Nepal's culinary traditions.</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Dr. Arjun" class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Dr. Arjun</div>
+                            <div class="testimonial-role">Cultural Anthropologist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="section-title" style="color: #f1faee;">Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest recipes, restaurant reviews, and culinary insights from Nepal.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
@@ -670,7 +992,60 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email Address</label>
+                    <input type="email" id="loginEmail" class="form-input" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Your password" required>
+                </div>
+                <button type="submit" class="form-submit">Login</button>
+                <div class="form-footer">
+                    Don't have an account? <a href="#" id="switchToSignup">Join now</a> <!-- Changed text -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="modal-title">Join Nepal Eater</h2> <!-- Changed title -->
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName" class="form-label">Full Name</label>
+                    <input type="text" id="signupName" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail" class="form-label">Email Address</label>
+                    <input type="email" id="signupEmail" class="form-input" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword" class="form-label">Password</label>
+                    <input type="password" id="signupPassword" class="form-input" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirm" class="form-label">Confirm Password</label>
+                    <input type="password" id="signupConfirm" class="form-input" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="form-submit">Join</button> <!-- Changed text -->
+                <div class="form-footer">
+                    Already have an account? <a href="#" id="switchToLogin">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -727,6 +1102,92 @@
                 } else {
                     backToTopBtn.classList.remove('show');
                 }
+            });
+            
+            // Modal functionality
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+            const loginButton = document.getElementById('loginButton');
+            const signupButton = document.getElementById('signupButton');
+            const switchToSignup = document.getElementById('switchToSignup');
+            const switchToLogin = document.getElementById('switchToLogin');
+            const closeButtons = document.querySelectorAll('.modal-close');
+            
+            function openModal(modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeModal(modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+            
+            loginButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal(loginModal);
+            });
+            
+            signupButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal(signupModal);
+            });
+            
+            switchToSignup.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeModal(loginModal);
+                openModal(signupModal);
+            });
+            
+            switchToLogin.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeModal(signupModal);
+                openModal(loginModal);
+            });
+            
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    closeModal(loginModal);
+                    closeModal(signupModal);
+                });
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === loginModal) {
+                    closeModal(loginModal);
+                }
+                if (e.target === signupModal) {
+                    closeModal(signupModal);
+                }
+            });
+            
+            // Form submission
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Login functionality would be implemented here!');
+                closeModal(loginModal);
+            });
+            
+            document.getElementById('signupForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const password = document.getElementById('signupPassword').value;
+                const confirm = document.getElementById('signupConfirm').value;
+                
+                if (password !== confirm) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+                
+                alert('Sign up functionality would be implemented here!');
+                closeModal(signupModal);
+            });
+            
+            // Newsletter form
+            document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thanks for subscribing to our newsletter!');
+                this.reset();
             });
             
             // Team member interaction
