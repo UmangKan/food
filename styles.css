@@ -65,7 +65,7 @@ body {
 .hero {
     position: relative;
     height: 500px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%23ff6b6b" width="1200" height="500"/><circle fill="%23feca57" cx="300" cy="150" r="80"/><circle fill="%23ff9ff3" cx="900" cy="300" r="120"/><rect fill="%2348dbfb" x="600" y="100" width="200" height="200" rx="20"/></svg>');
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero_photo.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -104,7 +104,7 @@ body {
 .featured-article {
     position: relative;
     height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><rect fill="%23ff7675" width="800" height="400"/><circle fill="%23fdcb6e" cx="200" cy="100" r="60"/><circle fill="%236c5ce7" cx="600" cy="250" r="80"/><path fill="%2300b894" d="M400,200 L500,150 L550,250 L450,300 Z"/></svg>');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/momo.webp');
     background-size: cover;
     background-position: center;
     border-radius: 8px;
