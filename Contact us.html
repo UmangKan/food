@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EatElite  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-color: red;
+            --primary-dark: red;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #777;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .site-banner {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-dark));
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .header-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        #header-right-menu {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        #header-right-menu a {
+            padding: 0.5rem;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        #header-right-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .header-active {
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        #menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* Footer/Content Section */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .footer-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 300px;
+        }
+
+        .tile-content {
+            padding: 2rem;
+        }
+
+        .tile-content h1 {
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .tile-content h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-row i {
+            width: 24px;
+            margin-right: 1rem;
+            color: var(--primary-color);
+        }
+
+        .tile-field {
+            color: var(--text-light);
+        }
+
+        /* Form Styles */
+        .form-field {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-field:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+
+        textarea.form-field {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #header-right-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--secondary-color);
+                padding: 1rem;
+                box-shadow: var(--shadow);
+                z-index: 1000;
+            }
+
+            #header-right-menu.active {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+
+            .heading {
+                font-size: 2rem;
+                padding: 2rem 1rem;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="site-banner">
+            <div class="header-menu">
+                <a href="#" class="logo">EatElite</a> 
+                <span id="menu-icon" onClick="toggleMenu()"><i class="fas fa-bars"></i></span>
+                <span id="header-right-menu"> 
+                    <a href="#">Home</a> 
+                    <a href="#">About us </a> 
+                    <a href="#">Blog</a>
+					<a href="#">Trending</a>
+                    <a href="#" class="header-active">Contact us</a>
+                </span>
+            </div>
+            <h1 class="heading">Get in Touch With Us</h1>
+        </div>
+        
+        <div class="Main">
+            <div class="Main-column">
+                <div class="map-container">
+                    <!-- Embedded Google Map (replace with your actual embed code) -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2683680549176!2d85.3226180746724!3d27.708999125420057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1755759198382!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <div class="tile-content">
+                    <h1>Meet Us</h1>
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <span class="tile-field">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tile-field">contact@company.com</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="tile-field">Islington, Kathmandu, Nepal</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-clock"></i>
+                        <span class="tile-field">Mon-Fri: 9AM-5PM</span>
+                    </div>
+                    <div class="contact-row" style="margin-top: 2rem;">
+                        <a href="#" class="button">Schedule a Meeting</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-column contact-form-container">
+                <div class="tile-content">
+                    <form id="contactForm" method="POST">
+                        <h1>Send a Message</h1>
+                        <div class="contact-row">
+                            <input type="text" class="form-field" placeholder="Your Name" required>
+                        </div>
+                        <div class="contact-row">
+                            <input type="email" class="form-field" placeholder="Your Email" required>
+                        </div>
+                        <div class="contact-row">
+                            <input type="text" class="form-field" placeholder="Subject">
+                        </div>
+                        <div class="contact-row">
+                            <textarea class="form-field" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                    <div id="successMessage" class="success-message">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuElement = document.getElementById("header-right-menu");
+            menuElement.classList.toggle("active");
+        }
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server here
+            // For demonstration, we'll just show a success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset the form after submission
+            setTimeout(function() {
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
