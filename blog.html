@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Nepal Eater</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header bg-white border-b sticky top-0 z-50">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nepal Eater</a>
+            <nav>
+                <ul class="nav-menu flex gap-6 text-sm uppercase tracking-wide">
+                    <li><a class="hover:text-red-600 transition-colors" href="trending.html">Trending</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="recipes.html">Recipes</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="blog.html">Blogs</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="#new">New</a></li>
+                    <li><a class="hover:text-red-600 transition-colors" href="#all">All</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content mx-auto max-w-6xl px-4">
+        <!-- Popular Blogs -->
+        <section id="popular" class="popular-blogs">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
+                <h2>Popular Blogs</h2>
+            </div>
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff6b6b&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23feca57&quot; cx=&quot;120&quot; cy=&quot;80&quot; r=&quot;35&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;300&quot; cy=&quot;120&quot; r=&quot;45&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Popular</span>
+                        <h3>10 Must-Try Nepali Street Foods</h3>
+                        <p>From spicy chatpate to crispy sel roti, your guide to the most beloved bites across Nepal.</p>
+                        <div class="article-meta">2.5K reads • Street Food</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23a29bfe&quot; width=&quot;400&quot; height=&quot;200&quot;/><rect fill=&quot;%23fd79a8&quot; x=&quot;80&quot; y=&quot;50&quot; width=&quot;120&quot; height=&quot;100&quot; rx=&quot;10&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;320&quot; cy=&quot;90&quot; r=&quot;25&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Popular</span>
+                        <h3>Inside Kathmandu’s Third-Wave Tea Bars</h3>
+                        <p>How specialty tea culture is reshaping social spaces and tastes.</p>
+                        <div class="article-meta">1.9K reads • Beverages</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- New Blogs -->
+        <section id="new" class="new-blogs">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
+                <h2>New Blogs</h2>
+            </div>
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23e17055&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23a29bfe&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;40&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;300&quot; cy=&quot;80&quot; r=&quot;30&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">New</span>
+                        <h3>Budget Eats in Pokhara</h3>
+                        <p>Great meals under Rs. 300—local favorites and hidden gems.</p>
+                        <div class="article-meta">2 hours ago • Guides</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff7675&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23fdcb6e&quot; cx=&quot;150&quot; cy=&quot;100&quot; r=&quot;50&quot;/><rect fill=&quot;%236c5ce7&quot; x=&quot;250&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;100&quot; rx=&quot;10&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">New</span>
+                        <h3>5 Regional Dal Bhat Variations</h3>
+                        <p>Subtle differences from Terai to the Himalayas—and why they matter.</p>
+                        <div class="article-meta">Today • Regional</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%2300b894&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23e17055&quot; cx=&quot;200&quot; cy=&quot;100&quot; r=&quot;60&quot;/><path fill=&quot;%23fdcb6e&quot; d=&quot;M100,50 L150,100 L100,150 L50,100 Z&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">New</span>
+                        <h3>Mountain Herbs 101</h3>
+                        <p>Cooking with jimbu, timur, and beyond—flavor boosters from high altitudes.</p>
+                        <div class="article-meta">Yesterday • Ingredients</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- All Blogs -->
+        <section id="all" class="all-blogs">
+            <div class="section-header mb-6 border-b-2 border-red-500 pb-2">
+                <h2>All Blogs</h2>
+            </div>
+            <div class="article-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff7675&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23fdcb6e&quot; cx=&quot;150&quot; cy=&quot;100&quot; r=&quot;50&quot;/><rect fill=&quot;%236c5ce7&quot; x=&quot;250&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;100&quot; rx=&quot;10&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Festive Sweets of Tihar</h3>
+                        <p>Traditions, stories, and recipes behind beloved mithai.</p>
+                        <div class="article-meta">Culture</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23a29bfe&quot; width=&quot;400&quot; height=&quot;200&quot;/><rect fill=&quot;%23fd79a8&quot; x=&quot;80&quot; y=&quot;50&quot; width=&quot;120&quot; height=&quot;100&quot; rx=&quot;10&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;320&quot; cy=&quot;90&quot; r=&quot;25&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Heirloom Grains of the Hills</h3>
+                        <p>Foxtail millet, buckwheat, and the farmers preserving them.</p>
+                        <div class="article-meta">Ingredients</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%2300b894&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23e17055&quot; cx=&quot;200&quot; cy=&quot;100&quot; r=&quot;60&quot;/><path fill=&quot;%23fdcb6e&quot; d=&quot;M100,50 L150,100 L100,150 L50,100 Z&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Kitchen Tools: Past and Present</h3>
+                        <p>From silauta lohoro to modern grinders—what changed and why.</p>
+                        <div class="article-meta">Culture</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23ff9ff3&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%2348dbfb&quot; cx=&quot;120&quot; cy=&quot;70&quot; r=&quot;35&quot;/><circle fill=&quot;%23feca57&quot; cx=&quot;280&quot; cy=&quot;130&quot; r=&quot;45&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Street Snacks for Rainy Days</h3>
+                        <p>Piping hot pakodas, soups, and snacks to warm the soul.</p>
+                        <div class="article-meta">Street Food</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%23fdcb6e&quot; width=&quot;400&quot; height=&quot;200&quot;/><rect fill=&quot;%23ff7675&quot; x=&quot;50&quot; y=&quot;50&quot; width=&quot;100&quot; height=&quot;100&quot; rx=&quot;15&quot;/><circle fill=&quot;%236c5ce7&quot; cx=&quot;300&quot; cy=&quot;100&quot; r=&quot;45&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Sauces and Achaars Pairing Guide</h3>
+                        <p>Match heat and tang with the right dishes for balance.</p>
+                        <div class="article-meta">Techniques</div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 200&quot;><rect fill=&quot;%236c5ce7&quot; width=&quot;400&quot; height=&quot;200&quot;/><circle fill=&quot;%23ff7675&quot; cx=&quot;160&quot; cy=&quot;90&quot; r=&quot;40&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;280&quot; cy=&quot;120&quot; r=&quot;30&quot;/></svg>'); background-size: cover;"></div>
+                    <div class="article-content">
+                        <span class="article-category">Blog</span>
+                        <h3>Restaurant Spotlight: Patan’s Hidden Courtyard</h3>
+                        <p>Seasonal menus in a stunning heritage setting.</p>
+                        <div class="article-meta">Reviews</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Nepal Eater</h3>
+            <p>Celebrating the rich culinary heritage and evolving food culture of Nepal</p>
+            <p>&copy; 2025 Nepal Eater. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">TW</a>
+                <a href="#">YT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+</body>
+</html>
+
+

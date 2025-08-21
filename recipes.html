@@ -68,14 +68,27 @@
         .hero {
             position: relative;
             height: 360px;
-            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360"><rect fill="%23ff6b6b" width="1200" height="360"/><circle fill="%23feca57" cx="260" cy="120" r="70"/><circle fill="%2300b894" cx="980" cy="220" r="110"/><rect fill="%236c5ce7" x="520" y="80" width="220" height="160" rx="20"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            overflow: hidden;
+        }
+
+        .hero img.hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .hero .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -316,7 +329,7 @@
                 <ul class="nav-menu">
                     <li><a href="trending.html">Trending</a></li>
                     <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="#restaurants">Restaurants</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
                     <li><a href="#culture">Culture</a></li>
                     <li><a href="#reviews">Reviews</a></li>
                 </ul>
@@ -326,6 +339,7 @@
 
     <!-- Hero -->
     <section class="hero">
+        <img src="images/Recipe Hero.jpeg" alt="Nepali recipes hero" class="hero-image" loading="eager">
         <div class="hero-content">
             <h1>Nepali Recipes</h1>
             <p>Authentic, home-style and modern takes on Nepal's most beloved dishes—curated for everyday cooking and festive feasts.</p>
@@ -485,110 +499,6 @@
                 </div>
             </div>
 
-            <!-- Kwati -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%2348dbfb&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23ff9ff3&quot; cx=&quot;120&quot; cy=&quot;100&quot; r=&quot;40&quot;/><rect fill=&quot;%23fdcb6e&quot; x=&quot;250&quot; y=&quot;60&quot; width=&quot;100&quot; height=&quot;100&quot; rx=&quot;14&quot;/></svg>');">
-                    <div class="recipe-badge">Festival</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Kwati (Nine-Bean Soup)</h3>
-                    <p class="recipe-description">Protein-rich mixed legume stew traditionally prepared during Janai Purnima.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★☆</span><span>4.6 (612)</span></div>
-                        <span>60 min • Medium</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Achar Platter -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%2399cc66&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23ffcc66&quot; cx=&quot;200&quot; cy=&quot;110&quot; r=&quot;50&quot;/></svg>');">
-                    <div class="recipe-badge">Condiments</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Achaar Trio (Tomato, Sesame, Radish)</h3>
-                    <p class="recipe-description">Three essential Nepali chutneys to pair with snacks and meals; mortar-and-pestle method included.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★★</span><span>4.9 (1.9K)</span></div>
-                        <span>25 min • Easy</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Thakali Set -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%23333&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23e53e3e&quot; cx=&quot;200&quot; cy=&quot;110&quot; r=&quot;60&quot;/></svg>');">
-                    <div class="recipe-badge">Regional</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Thakali Set (Rice, Lentils, Saag, Meat Curry)</h3>
-                    <p class="recipe-description">Balanced and hearty platter from the Thak Khola region—simple, clean flavors and ghee finish.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★★</span><span>4.8 (1.4K)</span></div>
-                        <span>55 min • Medium</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Samay Baji -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%23e17055&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%2300b894&quot; cx=&quot;110&quot; cy=&quot;110&quot; r=&quot;40&quot;/><rect fill=&quot;%2348dbfb&quot; x=&quot;250&quot; y=&quot;70&quot; width=&quot;90&quot; height=&quot;90&quot; rx=&quot;12&quot;/></svg>');">
-                    <div class="recipe-badge">Newari</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Samay Baji (Festive Platter)</h3>
-                    <p class="recipe-description">An assortment of beaten rice, choila, boiled egg, black soybeans, achaar and more—party favorite.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★☆</span><span>4.7 (978)</span></div>
-                        <span>60 min • Medium</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kheer -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%23eee&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23fdcb6e&quot; cx=&quot;200&quot; cy=&quot;110&quot; r=&quot;60&quot;/></svg>');">
-                    <div class="recipe-badge">Dessert</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Kheer (Cardamom Rice Pudding)</h3>
-                    <p class="recipe-description">Creamy slow-cooked rice pudding infused with cardamom and bay leaf; garnished with nuts.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★★</span><span>4.9 (2.5K)</span></div>
-                        <span>40 min • Easy</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Aloo Achaar (Sadeko Aloo) -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%23ffcc99&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23ff6b6b&quot; cx=&quot;100&quot; cy=&quot;100&quot; r=&quot;40&quot;/><rect fill=&quot;%2300b894&quot; x=&quot;240&quot; y=&quot;70&quot; width=&quot;120&quot; height=&quot;80&quot; rx=&quot;12&quot;/></svg>');">
-                    <div class="recipe-badge">Snack</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Aloo Achaar (Spiced Potato Salad)</h3>
-                    <p class="recipe-description">Tangy, sesame-spiced potato salad with mustard oil tempering; brilliant side for lunches.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★☆</span><span>4.6 (1.0K)</span></div>
-                        <span>25 min • Easy</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Aloo Sadeko (Peanut) -->
-            <div class="recipe-card">
-                <div class="recipe-image" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 400 220&quot;><rect fill=&quot;%2399aaff&quot; width=&quot;400&quot; height=&quot;220&quot;/><circle fill=&quot;%23ffaa66&quot; cx=&quot;220&quot; cy=&quot;110&quot; r=&quot;50&quot;/></svg>');">
-                    <div class="recipe-badge">Vegan</div>
-                </div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Bhuteko Bhatmas (Crispy Soybeans)</h3>
-                    <p class="recipe-description">Addictive crunchy soybeans tossed with garlic, chili and turmeric—perfect munchies.</p>
-                    <div class="recipe-meta">
-                        <div class="recipe-rating"><span class="stars">★★★★☆</span><span>4.6 (542)</span></div>
-                        <span>15 min • Easy</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Collections -->
