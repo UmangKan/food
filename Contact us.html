@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | EatElite  </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* CSS Variables for consistent theming */
         :root {
@@ -270,7 +272,6 @@
                     <li><a href="trending.html">TRENDS</a></li>
                     <li><a href="recipes.html">RECIPES</a></li>
                     <li><a href="blog.html">BLOGS</a></li>
-                    <li><a href="recipes.html">RECIPES</a></li>
                     <li><a href="Contact us.html">CONTACT US</a></li>
                     <li><a href="aboutus.html">ABOUT US</a></li>
                     <li>
@@ -344,9 +345,14 @@
     </div>
 
     <script>
-        function toggleMenu() {
-            var menuElement = document.getElementById("header-right-menu");
-            menuElement.classList.toggle("active");
+        // Mobile menu toggle consistent with shared header
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const siteNavLinks = document.querySelector('.site-nav-links');
+        if (mobileMenuBtn && siteNavLinks) {
+            mobileMenuBtn.addEventListener('click', function() {
+                siteNavLinks.classList.toggle('active');
+                this.innerHTML = siteNavLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
         }
 
         // Form submission handling
