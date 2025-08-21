@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trending - Nepal Eater</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Nepal Eater</a>
+    <header class="site-header">
+        <div class="site-container">
             <nav>
-                <ul class="nav-menu">
-                    <li><a href="trending.html">Trending</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="blog.html">Blogs</a></li>
-                    <li><a href="#culture">Culture</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
+                <a href="index.html" class="site-logo"><i class="fas fa-utensils"></i>Nepal Eater</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+                <ul class="site-nav-links">
+                    <li><a href="trending.html">TRENDS</a></li>
+                    <li><a href="recipes.html">RECIPES</a></li>
+                    <li><a href="blog.html">BLOGS</a></li>
+                    <li><a href="#culture">CULTURE</a></li>
+                    <li><a href="#reviews">REVIEWS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li>
+                        <div class="auth-buttons">
+                            <a href="#" class="auth-btn login-btn">Login</a>
+                            <a href="#" class="auth-btn signup-btn">Join</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -279,16 +289,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3>Nepal Eater</h3>
-            <p>Celebrating the rich culinary heritage and evolving food culture of Nepal</p>
-            <p>&copy; 2025 Nepal Eater. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#">FB</a>
-                <a href="#">IG</a>
-                <a href="#">TW</a>
-                <a href="#">YT</a>
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="site-footer-content">
+                <div class="site-footer-section">
+                    <h3>Nepal Eater</h3>
+                    <p>Bringing the authentic taste of Nepal to food lovers around the world. Explore, cook, and enjoy the diverse flavors of Nepal with us.</p>
+                </div>
+                <div class="site-footer-section">
+                    <h3>Connect With Us</h3>
+                    <p><i class="fab fa-facebook"></i> Facebook</p>
+                    <p><i class="fab fa-instagram"></i> Instagram</p>
+                    <p><i class="fab fa-twitter"></i> Twitter</p>
+                    <p><i class="fab fa-youtube"></i> YouTube</p>
+                </div>
+                <div class="site-footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@nepaleater.com</p>
+                    <p><i class="fas fa-phone"></i> +977-1-4567890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+                </div>
+            </div>
+            <div class="site-footer-bottom">
+                <p>&copy; 2025 Nepal Eater. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -346,7 +369,7 @@
         });
 
         // Smooth scrolling only for hash links; allow normal navigation otherwise
-        document.querySelectorAll('.nav-menu a').forEach(link => {
+        document.querySelectorAll('.site-nav-links a').forEach(link => {
             const href = link.getAttribute('href');
             if (href && href.startsWith('#')) {
                 link.addEventListener('click', function(e) {
@@ -359,6 +382,16 @@
                 });
             }
         });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const siteNavLinks = document.querySelector('.site-nav-links');
+        if (mobileMenuBtn && siteNavLinks) {
+            mobileMenuBtn.addEventListener('click', function() {
+                siteNavLinks.classList.toggle('active');
+                this.innerHTML = siteNavLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
+        }
     </script>
 </body>
 </html>
