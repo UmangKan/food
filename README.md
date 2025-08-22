@@ -138,4 +138,4 @@ We welcome contributions to improve EatsElite! Here's how you can help:
 
 ---
 
-**EatsElite** - Celebrating the Taste of Nepal, One Dish at a Time! 🍽️🇳🇵
+**EatsElite** - Celebrating the Taste of Nepal, One Dish at a Time! 🇳🇵
