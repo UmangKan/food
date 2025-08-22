@@ -2,41 +2,41 @@
 
 A comprehensive food review and culture website dedicated to exploring Nepal's rich culinary heritage, modern food trends, and traditional recipes.
 
-## 🍽️ About
+##  About
 
 EatsElite is a modern, responsive website that celebrates Nepali cuisine and food culture. From traditional dishes like Momo and Dal Bhat to contemporary fusion trends, we bring you the latest insights into Nepal's vibrant food scene.
 
-## ✨ Features
+##  Features
 
-### 🏠 Homepage
+###  Homepage
 - **Hero Section**: Showcases the "Taste of Nepal" with stunning visuals
 - **Featured Articles**: Highlighted stories about food evolution and trends
 - **Food Trends Grid**: Latest updates on plant-based cuisine, street food, beverages, and fusion dishes
 - **Trending Section**: Real-time food culture updates
 
-### 📖 Blog Section
+###  Blog Section
 - **Food Culture Articles**: Deep dives into Nepali culinary traditions
 - **Restaurant Reviews**: Honest reviews of local eateries
 - **Food Photography**: Beautiful imagery showcasing Nepali dishes
 - **Interactive Elements**: Engaging content with modern web design
 
-### 👨‍🍳 Recipes Section
+###  Recipes Section
 - **Traditional Recipes**: Authentic Nepali cooking methods
 - **Modern Twists**: Contemporary interpretations of classic dishes
 - **Step-by-step Instructions**: Easy-to-follow cooking guides
 - **Ingredient Lists**: Detailed measurements and alternatives
 
-### 📈 Trending Page
+###  Trending Page
 - **Latest Food Trends**: What's hot in Nepal's food scene
 - **Restaurant Spotlights**: Featured dining establishments
 - **Cultural Insights**: Food traditions and their modern adaptations
 
-### 📞 Contact & About
+###  Contact & About
 - **Contact Form**: Easy communication with the team
 - **About Us**: Story behind EatsElite and our mission
 - **Team Information**: Meet the food enthusiasts behind the platform
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **HTML5**: Semantic markup for accessibility and SEO
 - **CSS3**: Modern styling with responsive design
@@ -45,7 +45,7 @@ EatsElite is a modern, responsive website that celebrates Nepali cuisine and foo
 - **Google Fonts**: Typography (Playfair Display & Poppins)
 - **Responsive Design**: Mobile-first approach
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
@@ -62,21 +62,9 @@ EatsElite is a modern, responsive website that celebrates Nepali cuisine and foo
    - Simply open `index.html` in your web browser
    - Or use a local server for development
 
-3. For development with a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js (if you have http-server installed)
-   npx http-server
-   
-   # Using PHP
-   php -S localhost:8000
-   ```
+3. Navigate to `http://localhost:8000` in your browser
 
-4. Navigate to `http://localhost:8000` in your browser
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 foodreview/
@@ -99,7 +87,7 @@ foodreview/
 └── README.md              # This file
 ```
 
-## 🎨 Design Features
+##  Design Features
 
 - **Modern UI/UX**: Clean, intuitive interface design
 - **Responsive Layout**: Optimized for all device sizes
@@ -108,7 +96,7 @@ foodreview/
 - **Color Scheme**: Warm, food-inspired color palette
 - **Interactive Elements**: Hover effects and smooth transitions
 
-## 🍜 Content Focus
+##  Content Focus
 
 ### Traditional Nepali Dishes
 - **Momo**: Nepal's beloved dumplings
@@ -124,7 +112,7 @@ foodreview/
 - Beverage culture
 - Restaurant innovations
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions to improve EatsElite! Here's how you can help:
 
@@ -141,17 +129,7 @@ We welcome contributions to improve EatsElite! Here's how you can help:
 - Follow existing code style and formatting
 - Add appropriate alt text for images
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-- **Website**: [EatsElite](index.html)
-- **Email**: [Contact us](Contact us.html)
-- **About**: [Learn more about our team](aboutus.html)
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Nepali food culture and traditions
 - Local restaurants and chefs
