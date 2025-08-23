@@ -139,3 +139,11 @@ We welcome contributions to improve EatsElite! Here's how you can help:
 ---
 
 **EatsElite** - Celebrating the Taste of Nepal, One Dish at a Time! 🇳🇵
+
+## Contributions
+
+- [Ishan](https://github.com/kurokitsu22): Designed and developed the Contact Us page with a unique layout, blending creativity with the team’s ideas.
+- [Rojal](https://github.com/rojal123): Built the About Us page from scratch, laying the foundation for the navbar and footer for a consistent site look.
+- [Sanrose](https://github.com/Sanrose-Bhets): Created the Recipe and Blog pages and coordinated the team, ensuring smooth collaboration and clear task division.
+- [Umang](https://github.com/UmangKan): Developed the Home and Trending pages, while maintaining team morale and a balanced, positive environment.
+- [Unisha](https://github.com/unishabhattarai): Provided all information-based content and reports, gathering detailed restaurant info and
